@@ -1,0 +1,23 @@
+This is my first SPICE netlist in EENG 331
+V1 1 0 DC 1.8
+V2 2 0 DC 1.8
+V3 3 0 DC 0
+V4 4 0 DC 0
+X1 1 2 3 4 nmos_ee331 width=10u length=1u
+X2 4 3 2 1 pmos_ee331 width=10u length=1u
+.SUBCKT nmos_ee331 d g s b width=10u length=1u
+M1 d g s b nmos_internal W='width' L='length'
++ AD='width*2e-6' AS='width*2e-6' PD='4e-6+width' PS='4e-6+width'
+.MODEL nmos_internal NMOS LEVEL=1 uo=400 vto=0.4 lambda=0
++ tox=6.903n gamma=1 phi=0.6 cgdo=0.5n cgso=0.5n cj=0.001 mj=0.5 pb=1
++ cjsw=0.1n mjsw=0.5 capop=0
+.ENDS
+.SUBCKT pmos_ee331 d g s b width=10u length=1u
+M2 d g s b pmos_internal W='width' L='length'
++AD='width*2e-6' AS='width*2e-6' PD='4e-6+width' PS='4e-6+width'
+.MODEL pmos_internal PMOS LEVEL=1 uo=200 vto=-0.4 lambda=0
++ tox=6.903n gamma=1 phi=0.6 cgdo=0.5n cgso=0.5n cj=0.001 mj=0.5 pb=1
++ cjsw=0.1n mjsw=0.5 capop=0
+.ENDS
+.OP
+.END

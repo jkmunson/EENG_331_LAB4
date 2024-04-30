@@ -1,0 +1,42 @@
+LTspice 24.0.9 for Windows
+Circuit: This is my first SPICE netlist in EENG 331
+Start Time: Tue Apr 30 14:14:11 2024
+Error on line 18 : .model 2:pmos_internal pmos level=1 uo=200 vto=-0.4 lambda=0  tox=6.903n gamma=1 phi=0.6 cgdo=0.5n cgso=0.5n cj=0.001 mj=0.5 pb=1  cjsw=0.1n mjsw=0.5 capop=0
+	* Unrecognized parameter "capop" -- ignored
+Error on line 11 : .model 1:nmos_internal nmos level=1 uo=400 vto=0.4 lambda=0  tox=6.903n gamma=1 phi=0.6 cgdo=0.5n cgso=0.5n cj=0.001 mj=0.5 pb=1  cjsw=0.1n mjsw=0.5 capop=0
+	* Unrecognized parameter "capop" -- ignored
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+Model "1:nmos_internal": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:1:1": Length shorter than recommended for a level 1 MOSFET.
+Model "2:pmos_internal": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:2:2": Length shorter than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- MOSFET Transistors ---
+Name:           m:1:1           m:2:2
+Model:     1:nmos_internal 2:pmos_internal
+Id:            1.96e-03       -9.80e-04
+Vgs:           1.80e+00       -1.80e+00
+Vds:           1.80e+00       -1.80e+00
+Vbs:           0.00e+00        0.00e+00
+Vth:           4.00e-01       -4.00e-01
+Vdsat:         1.40e+00       -1.40e+00
+Gm:            2.80e-03        1.40e-03
+Gds:           0.00e+00        0.00e+00
+Gmb:           1.81e-03        9.04e-04
+Cbd:           1.28e-14        1.28e-14
+Cbs:           2.14e-14        2.14e-14
+Cgsov:         5.00e-15        5.00e-15
+Cgdov:         5.00e-15        5.00e-15
+Cgbov:         0.00e+00        0.00e+00
+Cgs:           3.33e-14        3.33e-14
+Cgd:           0.00e+00        0.00e+00
+Cgb:           0.00e+00        0.00e+00
+
+
+Total elapsed time: 0.033 seconds.
+
